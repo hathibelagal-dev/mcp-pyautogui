@@ -54,7 +54,7 @@ Use that location when you're adding `mcp-pyautogui` to your `claude_desktop_con
       "args": [
           ""
       ]
-  }
+    }
   }
 }
 ```
@@ -104,7 +104,7 @@ The server runs over `stdio` transport, meaning it communicates through standard
   - *Return Type*: `bool`
 - **`get_mouse_position()`**: Get current mouse coordinates as (x, y).  
   - *Parameters*: None  
-  - *Return Type*: `Tuple[int, int]`
+  - *Return Type*: `str`
 - **`get_os()`**: Get the current OS name (e.g., `'Windows'`, `'macOS'`, `'Linux'`).  
   - *Parameters*: None  
   - *Return Type*: `str`
@@ -113,7 +113,7 @@ The server runs over `stdio` transport, meaning it communicates through standard
   - *Return Type*: `bool`
 - **`get_screen_size()`**: Get the screen resolution as (width, height).  
   - *Parameters*: None  
-  - *Return Type*: `Tuple[int, int]`
-- **`pixel_color(x, y)`**: Get the RGB color of the pixel at (x, y). Returns (r, g, b) tuple.  
+  - *Return Type*: `str`
+- **`pixel_color(x, y)`**: Get the RGB color of the pixel at (x, y). Returns (r, g, b).  
   - *Parameters*: `x: int`, `y: int`  
-  - *Return Type*: `Tuple[int, int, int]`
+  - *Return Type*: `str`

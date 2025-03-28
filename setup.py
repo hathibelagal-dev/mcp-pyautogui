@@ -9,7 +9,7 @@ with open("README.md", "r", encoding="utf-8") as f:
 
 setup(
     name="mcp-pyautogui",
-    version="0.0.3",
+    version="0.0.4",
     author="Ashraff Hathibelagal",
     description="A powerful MCP server for PyAutoGUI",
     long_description=long_description,
