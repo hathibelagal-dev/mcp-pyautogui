@@ -1,4 +1,3 @@
-from typing import Tuple
 import pyautogui
 from mcp.server.fastmcp import FastMCP
 import platform
@@ -70,13 +69,13 @@ def scroll(amount: int) -> bool:
         return False
 
 @server.tool()
-def get_mouse_position() -> Tuple[int, int]:
-    """Get the current (x, y) coordinates of the mouse. Returns (x, y) tuple. Tuple will have negative values if failed."""
+def get_mouse_position() -> str:
+    """Get the current (x, y) coordinates of the mouse. Returns (x, y). The string will have negative values if failed."""
     try:
         x, y = pyautogui.position()
-        return (x, y)
+        return str((x, y))
     except Exception as e:
-        return (-1, -1)
+        return str((-1, -1))
 
 @server.tool()
 def hotkey(keys: str) -> bool:
@@ -98,8 +97,8 @@ def double_click(x: int, y: int) -> bool:
         return False
 
 @server.tool()
-def get_screen_size() -> Tuple[int, int]:
-    """Get the screen resolution as (width, height). Returns (width, height) or (-1, -1) on failure."""
+def get_screen_size() -> str:
+    """Get the screen resolution as (width, height). Returns a string in the format (width, height). On failure it returns (-1, -1)"""
     try:
         width, height = pyautogui.size()
         return (width, height)
@@ -107,13 +106,13 @@ def get_screen_size() -> Tuple[int, int]:
         return (-1, -1)
     
 @server.tool()
-def get_pixel_color(x: int, y: int) -> Tuple[int, int, int]:
-    """Get the RGB color of the pixel at (x, y). Returns (r, g, b) tuple or (-1, -1, -1) on failure."""
+def get_pixel_color(x: int, y: int) -> str:
+    """Get the RGB color of the pixel at (x, y). Returns a string in the format (r, g, b). On failure it returns (-1, -1, -1)"""
     try:
         r, g, b = pyautogui.pixel(x, y)
-        return (r, g, b)
+        return str((r, g, b))
     except Exception as e:
-        return (-1, -1, -1)
+        return str((-1, -1, -1))
 
 @server.tool()
 def get_os() -> str:
