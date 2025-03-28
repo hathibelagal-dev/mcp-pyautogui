@@ -1,5 +1,10 @@
 # MCP Server for PyAutoGUI 
 
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![PyPI - Version](https://img.shields.io/pypi/v/mcp-pyautogui)](https://pypi.org/project/mcp-pyautogui)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/mcp-pyautogui)
+![PyPI - Status](https://img.shields.io/pypi/status/mcp-pyautogui)
+
 <img width="958" alt="sshot1 pmg" src="https://github.com/user-attachments/assets/0eeb1e1e-78ae-4c8c-8427-86079b3d94fe" />
 
 `mcp-pyautogui` implements a **Model Context Protocol (MCP)** server for **PyAutoGUI**. It provides control of mouse, keyboard, and screen interactions, allowing AI systems to automate tasks on a host machine.
