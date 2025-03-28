@@ -87,6 +87,33 @@ def hotkey(keys: str) -> bool:
         return True
     except Exception as e:
         return False
+    
+@server.tool()
+def double_click(x: int, y: int) -> bool:
+    """Perform a double-click at the given (x, y) coordinates. Returns true if success, else false."""
+    try:
+        pyautogui.doubleClick(x, y)
+        return True
+    except Exception as e:
+        return False
+
+@server.tool()
+def get_screen_size() -> Tuple[int, int]:
+    """Get the screen resolution as (width, height). Returns (width, height) or (-1, -1) on failure."""
+    try:
+        width, height = pyautogui.size()
+        return (width, height)
+    except Exception as e:
+        return (-1, -1)
+    
+@server.tool()
+def get_pixel_color(x: int, y: int) -> Tuple[int, int, int]:
+    """Get the RGB color of the pixel at (x, y). Returns (r, g, b) tuple or (-1, -1, -1) on failure."""
+    try:
+        r, g, b = pyautogui.pixel(x, y)
+        return (r, g, b)
+    except Exception as e:
+        return (-1, -1, -1)
 
 @server.tool()
 def get_os() -> str:

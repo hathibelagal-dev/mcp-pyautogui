@@ -28,3 +28,47 @@ The server runs over `stdio` transport, meaning it communicates through standard
 - Copy text: `hotkey("ctrl c")` → Returns true.
 - Get current operating system: `get_os()` → Returns "Windows" (if on Windows).
 
+## Full List of Available Tools
+
+- **`click(x, y)`**: Left-click at coordinates (x, y).  
+  - *Parameters*: `x: int`, `y: int`  
+  - *Return Type*: `bool`
+- **`right_click(x, y)`**: Right-click at coordinates (x, y).  
+  - *Parameters*: `x: int`, `y: int`  
+  - *Return Type*: `bool`
+- **`move_to(x, y)`**: Move mouse to coordinates (x, y) over 3 seconds.  
+  - *Parameters*: `x: int`, `y: int`  
+  - *Return Type*: `bool`
+- **`drag_to(x, y, duration)`**: Drag mouse to (x, y) over specified duration (default 1.0s).  
+  - *Parameters*: `x: int`, `y: int`, `duration: float`  
+  - *Return Type*: `bool`
+- **`type_text(text)`**: Type the given text.  
+  - *Parameters*: `text: str`  
+  - *Return Type*: `bool`
+- **`press_key(key)`**: Press and release a single key (e.g., `'enter'`, `'space'`, `'a'`).  
+  - *Parameters*: `key: str`  
+  - *Return Type*: `bool`
+- **`hotkey(keys)`**: Press multiple keys together (e.g., `'ctrl c'`). Space-separated string.  
+  - *Parameters*: `keys: str`  
+  - *Return Type*: `bool`
+- **`scroll(amount)`**: Scroll up (positive) or down (negative) by amount.  
+  - *Parameters*: `amount: int`  
+  - *Return Type*: `bool`
+- **`take_screenshot(filename)`**: Save a screenshot to the specified file (e.g., `'screen.png'`).  
+  - *Parameters*: `filename: str`  
+  - *Return Type*: `bool`
+- **`get_mouse_position()`**: Get current mouse coordinates as (x, y).  
+  - *Parameters*: None  
+  - *Return Type*: `Tuple[int, int]`
+- **`get_os()`**: Get the current OS name (e.g., `'Windows'`, `'macOS'`, `'Linux'`).  
+  - *Parameters*: None  
+  - *Return Type*: `str`
+- **`double_click(x, y)`**: Perform a double-click at the given (x, y) coordinates.  
+  - *Parameters*: `x: int`, `y: int`  
+  - *Return Type*: `bool`
+- **`get_screen_size()`**: Get the screen resolution as (width, height).  
+  - *Parameters*: None  
+  - *Return Type*: `Tuple[int, int]`
+- **`pixel_color(x, y)`**: Get the RGB color of the pixel at (x, y). Returns (r, g, b) tuple.  
+  - *Parameters*: `x: int`, `y: int`  
+  - *Return Type*: `Tuple[int, int, int]`
