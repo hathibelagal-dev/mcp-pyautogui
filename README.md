@@ -1,5 +1,7 @@
 # MCP Server for PyAutoGUI 
 
+<img width="958" alt="sshot1 pmg" src="https://github.com/user-attachments/assets/0eeb1e1e-78ae-4c8c-8427-86079b3d94fe" />
+
 `mcp-pyautogui` implements a **Model Context Protocol (MCP)** server for **PyAutoGUI**. It provides control of mouse, keyboard, and screen interactions, allowing AI systems to automate tasks on a host machine.
 
 The server runs over `stdio` transport and provides tools for clicking, typing, taking screenshots, and more, with a focus on simplicity and reliability. It’s designed for developers and AI enthusiasts looking to integrate desktop automation into their workflows.
@@ -15,6 +17,10 @@ The server runs over `stdio` transport and provides tools for clicking, typing, 
 ## Prerequisites
 
 - **Python 3.11+**
+
+You'll also have to grant the relevant permissions.
+
+<img width="950" alt="sshot2" src="https://github.com/user-attachments/assets/dcb193e0-e800-410f-aaf0-12319e120404" />
 
 ## Usage
 The server runs over `stdio` transport, meaning it communicates through standard input/output. To use it, connect an MCP-compatible client (e.g., an AI assistant or custom script) that can send JSON-RPC commands and receive responses.
