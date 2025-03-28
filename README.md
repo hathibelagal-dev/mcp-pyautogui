@@ -1,2 +1,2 @@
 # mcp-pyautogui
-An MCP server for PyAutoGUI
+A powerful MCP server for PyAutoGUI.
