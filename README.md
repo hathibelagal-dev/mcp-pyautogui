@@ -22,7 +22,41 @@ You'll also have to grant the relevant permissions.
 
 <img width="950" alt="sshot2" src="https://github.com/user-attachments/assets/dcb193e0-e800-410f-aaf0-12319e120404" />
 
+## Installation
+
+Use `pip` to install the server.
+
+```bash
+pip install mcp-pyautogui
+```
+
+You can then run the following comand to determine the location at which the server was installed:
+
+```bash
+which mcp-pyautogui
+
+# Sample output:
+# /Users/bob/miniconda3/envs/desk/bin/mcp-pyautogui
+```
+
+Use that location when you're adding `mcp-pyautogui` to your `claude_desktop_config.json` file. Here's a sample configuration:
+
+```json
+{
+  "mcpServers": {
+    "mcp-pyautogui": {
+      "command": "/Users/bob/miniconda3/envs/desk/bin/mcp-pyautogui",
+      "args": [
+          ""
+      ]
+  }
+  }
+}
+```
+
 ## Usage
+If you followed the above installation steps, you don't need to do anything else. Just use Claude Desktop and you should see all the tools this MCP server offers automatically. You could test this server by saying something like *"can you click at (200,200) ?"*.
+
 The server runs over `stdio` transport, meaning it communicates through standard input/output. To use it, connect an MCP-compatible client (e.g., an AI assistant or custom script) that can send JSON-RPC commands and receive responses.
 
 # Example Commands
